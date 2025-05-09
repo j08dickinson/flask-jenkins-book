@@ -20,7 +20,7 @@ pipeline {
 	stage('UAT') {
 	    steps {
 		echo 'Running UAT...'
-		sh 'venv/bin/behave chapter5-flask/'
+		sh 'venv/bin/behave chapter5-flask/features/'
 		sh 'pkill -9 -f chapter5-flask/library.py || true'
 	    }
         }
